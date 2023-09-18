@@ -26,6 +26,24 @@ function api_v1_animal_partial_update(payload) {
 function api_v1_animal_destroy(payload) {
   return juansharedatamodelsAPI.delete(`/api/v1/animal/${payload.id}/`)
 }
+function api_v1_card_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/card/`)
+}
+function api_v1_card_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/card/`, payload)
+}
+function api_v1_card_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/card/${payload.id}/`)
+}
+function api_v1_card_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/card/${payload.id}/`, payload)
+}
+function api_v1_card_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/card/${payload.id}/`, payload)
+}
+function api_v1_card_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/card/${payload.id}/`)
+}
 function api_v1_cat_list(payload) {
   return juansharedatamodelsAPI.get(`/api/v1/cat/`)
 }
@@ -83,11 +101,68 @@ function api_v1_dog_partial_update(payload) {
 function api_v1_dog_destroy(payload) {
   return juansharedatamodelsAPI.delete(`/api/v1/dog/${payload.id}/`)
 }
+function api_v1_ebank_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/ebank/`)
+}
+function api_v1_ebank_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/ebank/`, payload)
+}
+function api_v1_ebank_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/ebank/${payload.id}/`)
+}
+function api_v1_ebank_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/ebank/${payload.id}/`, payload)
+}
+function api_v1_ebank_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/ebank/${payload.id}/`, payload)
+}
+function api_v1_ebank_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/ebank/${payload.id}/`)
+}
+function api_v1_eshop_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/eshop/`)
+}
+function api_v1_eshop_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/eshop/`, payload)
+}
+function api_v1_eshop_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/eshop/${payload.id}/`)
+}
+function api_v1_eshop_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/eshop/${payload.id}/`, payload)
+}
+function api_v1_eshop_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/eshop/${payload.id}/`, payload)
+}
+function api_v1_eshop_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/eshop/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return juansharedatamodelsAPI.post(`/api/v1/login/`, payload)
 }
 function api_v1_signup_create(payload) {
   return juansharedatamodelsAPI.post(`/api/v1/signup/`, payload)
+}
+function api_v1_supplier_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/supplier/`)
+}
+function api_v1_supplier_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/supplier/`, payload)
+}
+function api_v1_supplier_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/supplier/${payload.id}/`)
+}
+function api_v1_supplier_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/supplier/${payload.id}/`, payload)
+}
+function api_v1_supplier_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(
+    `/api/v1/supplier/${payload.id}/`,
+    payload
+  )
+}
+function api_v1_supplier_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/supplier/${payload.id}/`)
 }
 function rest_auth_login_create(payload) {
   return juansharedatamodelsAPI.post(`/rest-auth/login/`, payload)
@@ -136,6 +211,12 @@ export const apiService = {
   api_v1_animal_update,
   api_v1_animal_partial_update,
   api_v1_animal_destroy,
+  api_v1_card_list,
+  api_v1_card_create,
+  api_v1_card_retrieve,
+  api_v1_card_update,
+  api_v1_card_partial_update,
+  api_v1_card_destroy,
   api_v1_cat_list,
   api_v1_cat_create,
   api_v1_cat_retrieve,
@@ -154,8 +235,26 @@ export const apiService = {
   api_v1_dog_update,
   api_v1_dog_partial_update,
   api_v1_dog_destroy,
+  api_v1_ebank_list,
+  api_v1_ebank_create,
+  api_v1_ebank_retrieve,
+  api_v1_ebank_update,
+  api_v1_ebank_partial_update,
+  api_v1_ebank_destroy,
+  api_v1_eshop_list,
+  api_v1_eshop_create,
+  api_v1_eshop_retrieve,
+  api_v1_eshop_update,
+  api_v1_eshop_partial_update,
+  api_v1_eshop_destroy,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_supplier_list,
+  api_v1_supplier_create,
+  api_v1_supplier_retrieve,
+  api_v1_supplier_update,
+  api_v1_supplier_partial_update,
+  api_v1_supplier_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,

@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Animal,Cat,Dog,Crossbow,Animal,Cat,Crossbow,Dog
+from home.models import Animal,Cat,Dog,Crossbow,Supplier,EShop,Card,Ebank,Animal,Card,Cat,Crossbow,Dog,Ebank,EShop,Supplier
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -98,4 +98,28 @@ class CrossbowSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Crossbow
+        fields = "__all__"
+
+class SupplierSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Supplier
+        fields = "__all__"
+
+class EShopSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = EShop
+        fields = "__all__"
+
+class CardSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Card
+        fields = "__all__"
+
+class EbankSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Ebank
         fields = "__all__"

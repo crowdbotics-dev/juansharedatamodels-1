@@ -19,5 +19,7 @@ class User(AbstractUser):
     everything that relates with an `User` is represented by this model.
     """
     name = models.CharField(null=True,blank=True,max_length=255,)
+    electronic_bank = models.ManyToManyField("home.Ebank",blank=True,related_name="user_electronic_bank",null=True,)
+    electronic_shop = models.ForeignKey("home.EShop",on_delete=models.CASCADE,null=True,blank=True,related_name="user_electronic_shop",)
     def get_absolute_url(self):
         return reverse('users:detail', kwargs={'username': self.username})

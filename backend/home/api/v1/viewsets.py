@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Animal,Cat,Dog,Crossbow,Animal,Cat,Crossbow,Dog,Animal,Cat,Crossbow,Dog
-from .serializers import AnimalSerializer,CatSerializer,DogSerializer,CrossbowSerializer,AnimalSerializer,CatSerializer,CrossbowSerializer,DogSerializer,AnimalSerializer,CatSerializer,CrossbowSerializer,DogSerializer
+from home.models import Animal,Cat,Dog,Crossbow,Supplier,EShop,Card,Ebank,Animal,Card,Cat,Crossbow,Dog,Ebank,EShop,Supplier,Animal,Card,Cat,Crossbow,Dog,Ebank,EShop,Supplier
+from .serializers import AnimalSerializer,CatSerializer,DogSerializer,CrossbowSerializer,SupplierSerializer,EShopSerializer,CardSerializer,EbankSerializer,AnimalSerializer,CardSerializer,CatSerializer,CrossbowSerializer,DogSerializer,EbankSerializer,EShopSerializer,SupplierSerializer,AnimalSerializer,CardSerializer,CatSerializer,CrossbowSerializer,DogSerializer,EbankSerializer,EShopSerializer,SupplierSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -52,3 +52,23 @@ class CrossbowViewSet(viewsets.ModelViewSet):
     serializer_class = CrossbowSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Crossbow.objects.all()
+
+class SupplierViewSet(viewsets.ModelViewSet):
+    serializer_class = SupplierSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Supplier.objects.all()
+
+class EShopViewSet(viewsets.ModelViewSet):
+    serializer_class = EShopSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = EShop.objects.all()
+
+class CardViewSet(viewsets.ModelViewSet):
+    serializer_class = CardSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Card.objects.all()
+
+class EbankViewSet(viewsets.ModelViewSet):
+    serializer_class = EbankSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Ebank.objects.all()

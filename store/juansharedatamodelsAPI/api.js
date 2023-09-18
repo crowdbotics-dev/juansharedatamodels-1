@@ -119,6 +119,24 @@ function api_v1_ebank_partial_update(payload) {
 function api_v1_ebank_destroy(payload) {
   return juansharedatamodelsAPI.delete(`/api/v1/ebank/${payload.id}/`)
 }
+function api_v1_ebank2_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/ebank2/`)
+}
+function api_v1_ebank2_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/ebank2/`, payload)
+}
+function api_v1_ebank2_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/ebank2/${payload.id}/`)
+}
+function api_v1_ebank2_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/ebank2/${payload.id}/`, payload)
+}
+function api_v1_ebank2_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/ebank2/${payload.id}/`, payload)
+}
+function api_v1_ebank2_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/ebank2/${payload.id}/`)
+}
 function api_v1_eshop_list(payload) {
   return juansharedatamodelsAPI.get(`/api/v1/eshop/`)
 }
@@ -241,6 +259,12 @@ export const apiService = {
   api_v1_ebank_update,
   api_v1_ebank_partial_update,
   api_v1_ebank_destroy,
+  api_v1_ebank2_list,
+  api_v1_ebank2_create,
+  api_v1_ebank2_retrieve,
+  api_v1_ebank2_update,
+  api_v1_ebank2_partial_update,
+  api_v1_ebank2_destroy,
   api_v1_eshop_list,
   api_v1_eshop_create,
   api_v1_eshop_retrieve,

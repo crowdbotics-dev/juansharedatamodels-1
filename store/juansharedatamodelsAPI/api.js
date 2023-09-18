@@ -44,6 +44,27 @@ function api_v1_cat_partial_update(payload) {
 function api_v1_cat_destroy(payload) {
   return juansharedatamodelsAPI.delete(`/api/v1/cat/${payload.id}/`)
 }
+function api_v1_crossbow_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/crossbow/`)
+}
+function api_v1_crossbow_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/crossbow/`, payload)
+}
+function api_v1_crossbow_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/crossbow/${payload.id}/`)
+}
+function api_v1_crossbow_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/crossbow/${payload.id}/`, payload)
+}
+function api_v1_crossbow_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(
+    `/api/v1/crossbow/${payload.id}/`,
+    payload
+  )
+}
+function api_v1_crossbow_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/crossbow/${payload.id}/`)
+}
 function api_v1_dog_list(payload) {
   return juansharedatamodelsAPI.get(`/api/v1/dog/`)
 }
@@ -121,6 +142,12 @@ export const apiService = {
   api_v1_cat_update,
   api_v1_cat_partial_update,
   api_v1_cat_destroy,
+  api_v1_crossbow_list,
+  api_v1_crossbow_create,
+  api_v1_crossbow_retrieve,
+  api_v1_crossbow_update,
+  api_v1_crossbow_partial_update,
+  api_v1_crossbow_destroy,
   api_v1_dog_list,
   api_v1_dog_create,
   api_v1_dog_retrieve,

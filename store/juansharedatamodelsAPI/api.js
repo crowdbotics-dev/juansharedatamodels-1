@@ -26,6 +26,42 @@ function api_v1_animal_partial_update(payload) {
 function api_v1_animal_destroy(payload) {
   return juansharedatamodelsAPI.delete(`/api/v1/animal/${payload.id}/`)
 }
+function api_v1_cat_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/cat/`)
+}
+function api_v1_cat_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/cat/`, payload)
+}
+function api_v1_cat_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/cat/${payload.id}/`)
+}
+function api_v1_cat_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/cat/${payload.id}/`, payload)
+}
+function api_v1_cat_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/cat/${payload.id}/`, payload)
+}
+function api_v1_cat_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/cat/${payload.id}/`)
+}
+function api_v1_dog_list(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/dog/`)
+}
+function api_v1_dog_create(payload) {
+  return juansharedatamodelsAPI.post(`/api/v1/dog/`, payload)
+}
+function api_v1_dog_retrieve(payload) {
+  return juansharedatamodelsAPI.get(`/api/v1/dog/${payload.id}/`)
+}
+function api_v1_dog_update(payload) {
+  return juansharedatamodelsAPI.put(`/api/v1/dog/${payload.id}/`, payload)
+}
+function api_v1_dog_partial_update(payload) {
+  return juansharedatamodelsAPI.patch(`/api/v1/dog/${payload.id}/`, payload)
+}
+function api_v1_dog_destroy(payload) {
+  return juansharedatamodelsAPI.delete(`/api/v1/dog/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return juansharedatamodelsAPI.post(`/api/v1/login/`, payload)
 }
@@ -79,6 +115,18 @@ export const apiService = {
   api_v1_animal_update,
   api_v1_animal_partial_update,
   api_v1_animal_destroy,
+  api_v1_cat_list,
+  api_v1_cat_create,
+  api_v1_cat_retrieve,
+  api_v1_cat_update,
+  api_v1_cat_partial_update,
+  api_v1_cat_destroy,
+  api_v1_dog_list,
+  api_v1_dog_create,
+  api_v1_dog_retrieve,
+  api_v1_dog_update,
+  api_v1_dog_partial_update,
+  api_v1_dog_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,

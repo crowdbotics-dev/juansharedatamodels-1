@@ -25,7 +25,7 @@ class EShop(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
     email = models.EmailField(max_length=254,)
-    supplier = models.ForeignKey("home.Supplier",on_delete=models.CASCADE,null=True,blank=True,related_name="eshop_supplier",)
+    supplier = models.ForeignKey("home.Supplier",null=True,blank=True,on_delete=models.CASCADE,related_name="eshop_supplier",)
 class Card(models.Model):
     'Generated Model'
     limit = models.BigIntegerField()
@@ -38,4 +38,7 @@ class Ebank(models.Model):
     verified_users = models.IntegerField()
     has_saving = models.BooleanField(null=True,blank=True,)
     has_checking = models.BooleanField(null=True,blank=True,)
-    card = models.ForeignKey("home.Card",on_delete=models.CASCADE,null=True,blank=True,related_name="ebank_card",)
+    card = models.ForeignKey("home.Card",null=True,blank=True,on_delete=models.CASCADE,related_name="ebank_card",)
+class Ebank2(models.Model):
+    'Generated Model'
+    aa = models.BigIntegerField()

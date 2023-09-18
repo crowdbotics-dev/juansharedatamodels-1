@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .viewsets import AnimalViewSet,CatViewSet,DogViewSet,CrossbowViewSet,SupplierViewSet,EShopViewSet,CardViewSet,EbankViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,EShopViewSet,SupplierViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,EShopViewSet,SupplierViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,EShopViewSet,SupplierViewSet
+from .viewsets import AnimalViewSet,CatViewSet,DogViewSet,CrossbowViewSet,SupplierViewSet,EShopViewSet,CardViewSet,EbankViewSet,Ebank2ViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,Ebank2ViewSet,EShopViewSet,SupplierViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,Ebank2ViewSet,EShopViewSet,SupplierViewSet,AnimalViewSet,CardViewSet,CatViewSet,CrossbowViewSet,DogViewSet,EbankViewSet,Ebank2ViewSet,EShopViewSet,SupplierViewSet
 
 from home.api.v1.viewsets import (
     SignupViewSet,
@@ -18,6 +18,7 @@ router.register('supplier', SupplierViewSet )
 router.register('eshop', EShopViewSet )
 router.register('card', CardViewSet )
 router.register('ebank', EbankViewSet )
+router.register('ebank2', Ebank2ViewSet )
 
 urlpatterns = [
     path("", include(router.urls)),

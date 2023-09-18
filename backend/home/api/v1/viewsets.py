@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Animal,Cat,Dog,Animal,Cat,Dog,Animal,Cat,Dog
-from .serializers import AnimalSerializer,CatSerializer,DogSerializer,AnimalSerializer,CatSerializer,DogSerializer,AnimalSerializer,CatSerializer,DogSerializer
+from home.models import Animal,Cat,Dog,Crossbow,Animal,Cat,Crossbow,Dog,Animal,Cat,Crossbow,Dog
+from .serializers import AnimalSerializer,CatSerializer,DogSerializer,CrossbowSerializer,AnimalSerializer,CatSerializer,CrossbowSerializer,DogSerializer,AnimalSerializer,CatSerializer,CrossbowSerializer,DogSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class DogViewSet(viewsets.ModelViewSet):
     serializer_class = DogSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Dog.objects.all()
+
+class CrossbowViewSet(viewsets.ModelViewSet):
+    serializer_class = CrossbowSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Crossbow.objects.all()

@@ -42,3 +42,6 @@ class Ebank(models.Model):
 class Ebank2(models.Model):
     'Generated Model'
     aa = models.BigIntegerField()
+class Jerusalem(models.Model):
+    'Generated Model'
+    born = models.BigIntegerField()

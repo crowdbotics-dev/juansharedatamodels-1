@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Animal,Cat,Dog,Crossbow,Supplier,EShop,Card,Ebank,Ebank2,Animal,Card,Cat,Crossbow,Dog,Ebank,Ebank2,EShop,Supplier,Animal,Card,Cat,Crossbow,Dog,Ebank,Ebank2,EShop,Supplier
-from .serializers import AnimalSerializer,CatSerializer,DogSerializer,CrossbowSerializer,SupplierSerializer,EShopSerializer,CardSerializer,EbankSerializer,Ebank2Serializer,AnimalSerializer,CardSerializer,CatSerializer,CrossbowSerializer,DogSerializer,EbankSerializer,Ebank2Serializer,EShopSerializer,SupplierSerializer,AnimalSerializer,CardSerializer,CatSerializer,CrossbowSerializer,DogSerializer,EbankSerializer,Ebank2Serializer,EShopSerializer,SupplierSerializer
+from home.models import Animal,Cat,Dog,Crossbow,Supplier,EShop,Card,Ebank,Ebank2,Jerusalem,Animal,Card,Cat,Crossbow,Dog,Ebank,Ebank2,EShop,Jerusalem,Supplier
+from .serializers import AnimalSerializer,CatSerializer,DogSerializer,CrossbowSerializer,SupplierSerializer,EShopSerializer,CardSerializer,EbankSerializer,Ebank2Serializer,JerusalemSerializer,AnimalSerializer,CardSerializer,CatSerializer,CrossbowSerializer,DogSerializer,EbankSerializer,Ebank2Serializer,EShopSerializer,JerusalemSerializer,SupplierSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -77,3 +77,8 @@ class Ebank2ViewSet(viewsets.ModelViewSet):
     serializer_class = Ebank2Serializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Ebank2.objects.all()
+
+class JerusalemViewSet(viewsets.ModelViewSet):
+    serializer_class = JerusalemSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Jerusalem.objects.all()

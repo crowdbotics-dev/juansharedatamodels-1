@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Animal,Cat,Dog,Crossbow,Supplier,EShop,Card,Ebank,Ebank2,Animal,Card,Cat,Crossbow,Dog,Ebank,Ebank2,EShop,Supplier
+from home.models import Dog,Ebank,Crossbow,Cat,Card,Supplier,EShop,Jerusalem,Ebank2,Animal,Animal,Card,Cat,Crossbow,Dog,Ebank,Ebank2,EShop,Jerusalem,Supplier
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -128,4 +128,10 @@ class Ebank2Serializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ebank2
+        fields = "__all__"
+
+class JerusalemSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Jerusalem
         fields = "__all__"
